@@ -1,0 +1,11 @@
+@import '../css/foundation.min';
+@import './_variables';
+
+html, body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
+  margin: 0;
+}

@@ -1,22 +1,29 @@
 <template>
   <div id="app">
+    <modals-container/>
+    <navigation/>
+    <statistics/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
+import Statistics from '@/components/Statistics'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Navigation,
+    Statistics
+  }
 }
 </script>
 
 <style lang="scss">
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  text-align: center; height: 100%;
 }
+
 </style>

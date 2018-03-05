@@ -1,41 +1,38 @@
 <template>
-  <div class="dashboard">
+  <div id="dashboard">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+import RegisterUser from '@/components/dialogs/RegisterUser'
+
 export default {
   name: 'dashboard',
   data () {
     return {
-      msg: 'Welcome to your truffle-vue dApp'
+      msg: 'Futures Market'
     }
   },
   mounted () {
     console.log('dashboard mounted')
-    debugger
+    this.$modal.show(
+      RegisterUser,
+      {
+        title: 'Register User'
+      },
+      {
+        adaptive: true
+      }
+    )
   }
 }
 </script>
 
 <style lang="scss" scoped>
-h1, h2 {
-  font-weight: normal;
-  display: block;
+
+#dashboard {
+
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>

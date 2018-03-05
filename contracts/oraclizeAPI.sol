@@ -1,5 +1,4 @@
 pragma solidity ^0.4.18;
-// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize SRL
 Copyright (c) 2016 Oraclize LTD
@@ -113,13 +112,13 @@ contract usingOraclize {
         return false;
     }
 
-    function __callback(bytes32 myid, string result) public {
+    /* function __callback(bytes32 myid, string result) public view {
         __callback(myid, result, new bytes(0));
     }
-    function __callback(bytes32 myid, string result, bytes proof) public {
+    function __callback(bytes32 myid, string result, bytes proof) public view {
       return;
       myid; result; proof; // Silence compiler warnings
-    }
+    } */
 
     function oraclize_getPrice(string datasource) oraclizeAPI internal returns (uint){
         return oraclize.getPrice(datasource);
